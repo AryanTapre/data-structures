@@ -23,7 +23,7 @@ using namespace std;
 
 int main() {
  
-    string str = "ab";
+    string str = "xyz";
     string output = "";
     int i = 0;
 
