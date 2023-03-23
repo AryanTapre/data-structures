@@ -4,7 +4,8 @@ using namespace std;
     
     void print(int i, int N, int arr[]) {
         if(i >= N) return;
-             cout<<arr[i] <<" ";
+        
+        cout<<arr[i] <<" ";
         print(i+1,N,arr); 
     }
 
