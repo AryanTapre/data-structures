@@ -11,7 +11,7 @@ int main()
     cout<<endl<<"size-> "<<size;
 
     for( int i=0; i<size;i++ )
-    {
+    { 
         cout<<a[i]<<endl;
     }
 
