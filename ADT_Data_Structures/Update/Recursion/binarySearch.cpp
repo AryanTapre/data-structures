@@ -32,6 +32,8 @@ int main() {
     int mid = 0;
     
     cout<<b_s(nums,start,end,mid,key);
+
+                
     
 return (0);
 }
