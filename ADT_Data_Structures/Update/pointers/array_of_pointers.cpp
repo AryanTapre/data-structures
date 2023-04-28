@@ -1,14 +1,14 @@
-/*  Creating array of pointers
-    where, each element points to some variable address.
-    Created by @AryanTapre
-    on date 28.04.2023
+/*      Creating array of pointers
+        where, each element points to some variable address.
+        Created by @AryanTapre
+        on date 28.04.2023
     */
 
 #include<iostream>
 using namespace std;
  
 int main() {
-    
+     
     int* arr[3];
     int nums[3] = {1,2,3};
     int* ptr = nums;
