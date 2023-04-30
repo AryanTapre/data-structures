@@ -10,7 +10,7 @@ using namespace std;
         if(N == 1) return 1;
         return N * findFactorial(N-1);
     }
-
+ 
 int main() {
 
     int get = findFactorial(5);
@@ -18,3 +18,4 @@ int main() {
 
 return (0);
 }
+
