@@ -4,8 +4,14 @@
 using namespace std;
  
     int max(vector<int>& arr, int i, int& N, int& maxi) {
-        if (i == N) { return maxi; }
-        if(arr.at(i) > maxi) { maxi = arr.at(i); }
+        if (i == N) { 
+            return maxi; 
+        }
+
+        if(arr.at(i) > maxi) { 
+            maxi = arr.at(i);
+        }
+        
         return max(arr,(i+1),N,maxi);
                
     }

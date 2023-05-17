@@ -2,6 +2,7 @@
 using namespace std;
 
 void point() {
+    
     int var = 20;
     int * ptr;
     ptr = &var;
