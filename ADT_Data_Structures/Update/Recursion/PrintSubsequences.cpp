@@ -1,6 +1,7 @@
 #include<iostream>
 using namespace std;
- 
+
+
     void printSubsequences(string str,string output,int i) {
         // base case::
         if(i >= str.length()) {
@@ -20,7 +21,7 @@ using namespace std;
 int main() {
  
     string str = "abc";
-    string output = "";
+    string output = ""; 
     int i = 0;
     printSubsequences(str,output,i);
 
