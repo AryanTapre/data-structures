@@ -1,6 +1,7 @@
 // leet code 1910
 #include<string>
 #include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
  
 string removeOccurrences(string s, string part) {
