@@ -11,7 +11,7 @@ int main() {
     ms.insert(10);
     ms.insert(70);
     ms.insert(40);
-
+    
     for(auto i : ms) {
         cout<<i<<" ";
     }

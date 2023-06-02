@@ -8,7 +8,6 @@ int main() {
     
     pair<int,char> p;
     p = make_pair(1,'a');
-    
     cout<<p.first<<" "<<p.second<<endl; 
        
 
