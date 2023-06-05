@@ -63,12 +63,12 @@ using namespace std;
         while(i != end) {
             
             if(data[i] == 0) {
-                swap(data[start],data[i]);
+                //swap(data[start],data[i]);
                 start++;
                 i++;
             }
             else {
-                swap(data[end],data[i]);
+                swap(data[end],data[start]);
                 end--;
             }
         }
