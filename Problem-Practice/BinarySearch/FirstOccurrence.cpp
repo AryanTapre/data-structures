@@ -7,7 +7,9 @@
 #include<iostream>
 #include<vector>
 using namespace std;
- 
+    
+    //TC: O(logN)
+    //SC: O(1)
     int firstOccurrence(vector<int>& A, int target) {
         int L = 0;
         int H = A.size()-1;
