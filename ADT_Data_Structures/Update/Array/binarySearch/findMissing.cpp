@@ -7,6 +7,7 @@ vector<int> findMissing(vector<int> v) {
     int s = 0,e = v.size()-1;
     int mid = s+(e-s)/2;
     int i=mid;
+    
     while(i>0) {
         if(v[i]-1 != v[i-1]) {
             missing.push_back(v[i]-1);
