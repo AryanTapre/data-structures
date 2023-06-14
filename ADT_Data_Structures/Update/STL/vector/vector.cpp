@@ -7,6 +7,7 @@ int main() {
     // vector<int> v(5,0); // 5 is size for vector and 0 is initialization with 0
 
     vector<int> v = {10,90,45,67,80,75,100,890,1670};
+    
 
     // iterators.
     vector<int> :: iterator it = v.begin();

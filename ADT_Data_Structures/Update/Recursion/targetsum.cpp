@@ -26,7 +26,7 @@ int print_no_required(vector<int>&v, int target) {
         }
     }
     
-    return 0;ṭ
+    return 0;
 }
 
 int solve(vector<int>& v, int target) {

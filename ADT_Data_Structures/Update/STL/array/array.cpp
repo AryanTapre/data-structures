@@ -6,7 +6,6 @@ int main() {
     
     array<int,10> arr = {1,2,3,4,5,6,7,8,9,10};
     array<int,10> arr2 = {10,20,30,40,50,60,70,80,90,100};
-
     cout<<"array size:"<<arr.size()<<endl;
     
     int &firstElement = arr.front();

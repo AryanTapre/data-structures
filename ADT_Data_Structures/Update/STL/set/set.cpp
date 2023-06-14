@@ -18,7 +18,8 @@ int main() {
     for(auto i : d) {
         cout<<i<<" ";
     }
-
+    auto get = d.count(1);
+    cout<<"counter:"<<get<<endl;
 
     // iterators
     set<int> :: iterator it;

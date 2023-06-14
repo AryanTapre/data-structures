@@ -5,14 +5,16 @@ leetcode 415
 #include<bits/stdc++.h>
 using namespace std;
 
+    // TC: O(N)
+    // SC: O(N)
 string addStrings(string num1, string num2, int i1, int i2, int carry) {
     // base condition::
     if(i1 < 0 && i2 < 0) {
         if(carry != 0) {
             return string(1,carry + '0');
-        }
+        } 
         
-        return "";
+       return "";
     }
 
     // to convert string to integer:
@@ -34,6 +36,9 @@ string addStrings(string num1, string num2, int i1, int i2, int carry) {
     ans += addStrings(num1, num2, i1-1, i2-1, carry);
     return ans;
 }
+
+
+    
 
 int main() {
 

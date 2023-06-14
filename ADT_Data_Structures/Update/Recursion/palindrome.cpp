@@ -1,33 +1,29 @@
-/*
-check given string is palindrome ? using recursion.
-*/
-
 #include<iostream>
-#include<string.h>
 using namespace std;
-    
-    bool isPalindrome(string& str, int sp, int ep) {
-        // base condition::
-        if(sp == ep || sp >= ep) {
-            return true;
-        }
-        else if (str.at(sp) != str.at(ep)) {
+ 
+    // TC: O(N/2) = O(N)
+    // SC: O(N/2) = O(N)
+    bool isPalindrome(string& s, int start, int end) {
+        if(s.empty()) {
             return false;
         }
+        // base case:
+        if(start >= end) {
+            return true;
+        }
 
-        return isPalindrome(str,sp+1,ep-1);
+        if(s[start] != s[end]) {
+            return false;
+        }
+        
+        return isPalindrome(s,start+1,end-1);
     }
 
 int main() {
-    string str = "abb";
-    int sp = 0;
-    int ep = str.size()-1;
+ 
+    string str = "pp";
+    cout<<isPalindrome(str,0,str.size()-1);
 
-   if(isPalindrome(str,sp,ep)) {
-    cout << "string IS palindrome.";
-   } else {
-    cout << "string is NOT palindrome.";
-   }
 
 return (0);
 }
