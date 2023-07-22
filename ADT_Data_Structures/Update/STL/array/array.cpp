@@ -40,12 +40,5 @@ int main() {
         cout<<x<<" ";
     } cout<<endl;
 
-    arr.
-
-    
-   
-
-
-
 return (0);
 }

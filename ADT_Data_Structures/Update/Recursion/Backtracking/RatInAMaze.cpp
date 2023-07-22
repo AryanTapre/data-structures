@@ -10,6 +10,8 @@ using namespace std;
     int yDirection[4] = {0,-1,1,0};
     char directionValue[4] = {'D','L','R','U'};
 
+    
+
     bool isSafe(int i, int j, int row, int col, vector<vector<int>>& maze, vector<vector<bool> > visited) {
         /* 1) valid index
            2) path avaliable

@@ -38,7 +38,7 @@ using namespace std;
                             bool res = solve(board); //recursion call..
 
                             if(res) {
-                                return true;
+                                return true; // move forward i.e, that cell is solved..
                             } else {
                                 board[i][j] = 0; // backtracking..
                             }
