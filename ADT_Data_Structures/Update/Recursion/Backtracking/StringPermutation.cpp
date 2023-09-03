@@ -7,7 +7,7 @@ permute the string "ab":
 using namespace std;
  
     void stringPermutation(string& str, int i) {
-        // basecase:
+        // base case:
         if(i>= str.length()) {
             cout<<str<<" ";
             return;

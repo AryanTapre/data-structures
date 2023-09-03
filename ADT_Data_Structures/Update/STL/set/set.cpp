@@ -18,7 +18,7 @@ int main() {
     for(auto i : d) {
         cout<<i<<" ";
     }
-    auto get = d.count(1);
+    auto get = d.count(10); // defines Whether element present or NOT in the SET..
     cout<<"counter:"<<get<<endl;
 
     // iterators

@@ -1,5 +1,6 @@
 #include<vector>
 #include<iostream>
+#include<algorithm>
 using namespace std;
  
 int main() {
@@ -8,7 +9,8 @@ int main() {
 
     vector<int> v = {10,90,45,67,80,75,100,890,1670};
     
-
+     reverse(v.begin(),v.end());
+    
     // iterators.
     vector<int> :: iterator it = v.begin();
     cout<<"first element:"<<*it<<endl;
@@ -68,7 +70,14 @@ int main() {
 
 
     // 2D vector
-    vector<vector<int>> 2dv;
+    int row = 2, col = 5;
+    vector<vector<int> > VR(row,vector<int>(col,20));
+    for(auto i : VR) {
+        for(auto y : i) {
+            cout<<y<<" ";
+        }
+        cout<<endl;
+    }
     
 
 

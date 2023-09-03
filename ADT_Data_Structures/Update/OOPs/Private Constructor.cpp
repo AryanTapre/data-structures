@@ -3,8 +3,8 @@ using namespace std;
  
 class Box {
 
-    int width;
-    Box(int _val):width(_val) {}
+    int width,hei;
+    Box(int _val,int data):width(_val),hei(data) {}
 
     public:
         void print() {
