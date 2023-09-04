@@ -60,6 +60,10 @@ int getMaxi(Node* root) {
     if(temp == nullptr) {
         return -1;
     }
+    // FIXME: if root->right does not exits, means root is the largest node return that..
+    if(temp->right == nullptr) {
+        return temp->right;
+    }
 
     while(temp->right != nullptr) {
         temp = temp->right;
@@ -71,6 +75,11 @@ int getMini(Node* root){
     Node* temp = root;
     if(temp == nullptr){
         return -1;
+    }
+
+    // FIXME: if root->left does not exits, means root is the minumum node return that..
+    if(temp->left == nullptr) {
+        return temp->left;
     }
 
     while(temp->left != nullptr){

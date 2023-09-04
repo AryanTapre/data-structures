@@ -80,9 +80,6 @@ bool findNode(Node* root, int &target) {
          right = findNode(root->right,target);
     
     return left || right;
-
-
-    
 }
 
 int main() {
