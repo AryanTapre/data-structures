@@ -1,4 +1,5 @@
-#include<vector>
+//FIXME: Creating BST using In-order Traversal
+
 #include<queue>
 #include<iostream>
 using namespace std;
@@ -15,38 +16,9 @@ class Node {
         }
 };
 
-// TODO: create BST utility function
-Node* createBSTHelper(Node* root, vector<int> &v, int data) {
-    if(root == nullptr) {
-        Node* newNode = new Node(v[data]);
-        return newNode;
-    }
-
-    if(root->data < v[data]) {
-        root->right = createBSTHelper(root->right,v,data);
-    }
-    else {
-        root->left = createBSTHelper(root->left,v,data);
-    }
-    return root;
-}
-
-
-// FIXME: creating BST
-Node* createBST(vector<int> &data) {
-    Node* root = nullptr;
-    for(int i=0; i<data.size(); i++ ){
-        root = createBSTHelper(root,data,i);
-    }
-    
-    return root;
-}
-
-
 void print(Node* root) {
     if(root == nullptr) return;
 
-    
     queue<Node*> q;
     q.push(root);
     q.push(nullptr);
@@ -67,11 +39,31 @@ void print(Node* root) {
     }
 }
 
+Node* bstInOrderTraversal(int inOrder[], int start, int end) {
+    //base case..
+    if(start > end) {
+        return nullptr;
+    }
+
+    int mid = start+(end-start)/2;
+    int element = inOrder[mid];
+
+    Node* root = new Node(element);
+
+    root->left = bstInOrderTraversal(inOrder,start,mid-1);
+    root->right = bstInOrderTraversal(inOrder,mid+1,end);
+
+    return root;
+}
+
 int main() {
  
-    vector<int> data = {10,0,56,100,99,56,56,45,87};
-    Node* root = createBST(data);
-    print(root);
+    int inOrder[] = {10,20,30,40,50,60,70,80,90,100};
+    Node* root = bstInOrderTraversal(inOrder,0,9);
+
+    cout<<"printing"<<endl;
+    print(root); 
+
 
 return 0;
 }
