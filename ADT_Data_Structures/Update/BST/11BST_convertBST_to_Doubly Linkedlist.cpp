@@ -39,17 +39,18 @@ Node* createBST(vector<int>&data) {
     return root;
 }
 
+// TODO: code starts hear..
 void bstToDoublyLinkedList(Node* root, Node* &head) {
     if(root == nullptr) {
         return;
     }
 
     bstToDoublyLinkedList(root->right,head);
-    root->right = head;
+    root->right = head;          // attaching root->right to head..
     if(head != nullptr) {
-        head->left = root;
+        head->left = root;      // attaching head->left to root..
     }
-    head = root;
+    head = root;                 // Updating the Head..
 
     bstToDoublyLinkedList(root->left,head);
 }
@@ -74,7 +75,7 @@ int main() {
     cout<<"printing the linked list : "<<endl;
     printLinkedList(head);
     cout<<endl;
-    
+
 
 return 0;
 }
