@@ -72,7 +72,18 @@ void deleteWord(Trie* root, string word) {
    return deleteWord(children,word.substr(1));
 }
 
+void getWords(Trie* root, string &word) {
+    if(root->isTerminal) {
+        cout<<word<<endl;
+    }
 
+
+    for(auto i : root->child) {
+        word += i.first;
+        getWords(i.second,word);
+        word.pop_back();
+    }
+}
 
 
 int main() {
@@ -101,8 +112,8 @@ int main() {
     }
 
 
-   
-
+   string word = "";
+    getWords(root,word);
 
     
 
