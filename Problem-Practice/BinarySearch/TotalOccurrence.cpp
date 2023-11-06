@@ -17,7 +17,6 @@ using namespace std;
         int totalOccurrence = (lastOccurrence-firstOccurrence);
         return totalOccurrence;
     }
-
 int main() {
 
     vector<int> v = {1,2,3,5,9};

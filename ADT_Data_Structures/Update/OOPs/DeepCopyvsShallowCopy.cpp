@@ -20,6 +20,7 @@ class Example {
     //     this->y = new int(*obj.y);
     // } 
 
+
     Example(int _x, int _y):x(_x),y(new int(_y)) {}
 
     void print() const  {
@@ -49,11 +50,11 @@ int main() {
 
 
     Example* a = new Example(1,2);
-    Example b = *a;
+    Example *b = a;
     a->print();
     delete a;
 
-    b.print(); 
+    b->print(); 
 
 
 

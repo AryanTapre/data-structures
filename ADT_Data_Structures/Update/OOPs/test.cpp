@@ -1,31 +1,30 @@
 #include<iostream>
 using namespace std;
 
-class Student {
+class A {
     public:
-        int rollNO;
-        int age;
-
-    Student() {
-
-    }    
-
-    Student(const Student &stu) {
-        this->age = stu.age;
-        this->rollNO = stu.rollNO;
-    }
+         A() {
+            cout<<"A constructor called"<<endl;
+        }
+        virtual ~A() {
+            cout<<"A destructor called"<<endl;
+        }
 };
 
-
+class B : public A {
+    public:
+        B() {
+            cout<<"B constructor called"<<endl;
+        }
+        ~B() {
+            cout<<"B destructor called"<<endl;
+        }
+};
 
 int main() {
+ 
+    B* b = new B();
+    delete b;
 
-    Student s1;
-    Student s2(s1);
-    s1.rollNO = 101;
-    s1.age = 20;
-
-    cout<<s2.age<<" "<<s2.rollNO<<endl; 
-
-return (0);
+return 0;
 }
